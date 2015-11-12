@@ -1,0 +1,26 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/cv_background.jpg);
+  background-attachment: fixed;
+
+
+}
+
+.page {
+  background-image: url(../img/page_background.png);
+  max-width: 40em;
+  margin: 0 auto;
+  background-color: grey;
+  font-family: 'Oxygen', sans-serif;
+  box-shadow: -20px -7px 35px rgba(0, 0, 0, 0.6); 
+}
+
+header {
+  font-family: 'Cabin', sans-serif;
+}
+
+.kacsa.majom olyan kacsa ami majom is
+
+.kacsa . majom olyan majom osztályú elem aminek van kacsa osztálya is.
