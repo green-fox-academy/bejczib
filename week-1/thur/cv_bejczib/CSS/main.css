@@ -1,26 +1,75 @@
 
+
+/**********************
+background
+**********************/
+
 body {
   margin: 0;
   padding: 0;
-  background-image: url(../img/cv_background.jpg);
+  background-image: url(../img/Cover.jpg);
   background-attachment: fixed;
-
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.page {
-  background-image: url(../img/page_background.png);
-  max-width: 40em;
-  margin: 0 auto;
-  background-color: grey;
-  font-family: 'Oxygen', sans-serif;
-  box-shadow: -20px -7px 35px rgba(0, 0, 0, 0.6); 
-}
+/**********************
+heading
+**********************/
 
 header {
-  font-family: 'Cabin', sans-serif;
+    text-align: center;
+    margin: 0, auto;
+    padding-bottom: 80px;
+    font-size: 2em;
 }
 
-.kacsa.majom olyan kacsa ami majom is
+/**********************
+Page
+**********************/
+.page {
+  max-width: 40em;
+  margin: 0 auto 85px;
+  background-color: rgba(100, 144, 170, 0.7);
+  font-family: 'Oxygen', sans-serif;
+  box-shadow: -5px -5px 20px 15px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 10px;
+  color: rgb(30, 32, 36)
+}
 
-.kacsa . majom olyan majom osztályú elem aminek van kacsa osztálya is.
+/**********************
+Contact info
+**********************/
+
+.contact-page {
+  max-width: 40em;
+  margin: 0 auto 400px;
+  background-color: rgba(100, 144, 170, 0.7);
+  font-family: 'Oxygen', sans-serif;
+  box-shadow: -5px -5px 20px 15px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 10px;
+  color: rgb(30, 32, 36)
+  text-decoration: none;
+  list-style: none;
+}
+
+.contact-info a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+  background-image: url(../img/phone.png);
+}
+
+.contact-info li.email a {
+  background-image: url(../img/mail.png);
+}
+
+.contact-info li.github a {
+  background-image: url(../img/github-wrap.png);
+}
