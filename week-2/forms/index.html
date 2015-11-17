@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form action="">
+      <p>
+        <label for="valami">Please type your name:</label>
+        <input required type="text" id="valami" placeholder="ide">
+      </p>
+      <p>
+        <label for="password">type="password":</label>
+        <input type="password">
+      </p>
+      <p>
+        <label for="emailadress">type="email":</label>
+        <input type="email">
+      </p>
+      <p>
+        <label for="webcim">type="url":</label>
+        <input type="url" id="webcim">
+      </p>
+      <p>
+        <label for="search">type="search":</label>
+        <input type="search" id="search">
+      </p>
+      <p>
+        <label for="color">type="color":</label>
+        <input type="color" id="color">
+      </p>
+      <p>
+        <label for="number">type="number":</label>
+        <input type="number" id="number" min="4" max="50" step="3">
+      </p>
+      <p>
+        <label for="csik">type="range":</label>
+        <input type="range" id="csik">
+      </p>
+      <p>
+        <label for="date">type="date":</label>
+        <input type="date" id="date">
+      </p>
+      <p>
+        progress:
+        <progress value="50" max="100">50%</progress>
+      </p>
+
+      <p>
+        <label for="legordulo">select + option</label>
+        <select id="legordulo">
+          <option disabled selected>choose</option>
+          <option>majom</option>
+          <option>csiga</option>
+          <option>banan</option>
+          <option>zsiraf</option>
+        </select>
+      </p>
+      <p>
+        <label for="textarea">textarea</label>
+        <textarea rows="8" cols="30">hello</textarea>
+      </p>
+      <p>
+        <input type="submit" value="push the button">
+        <button type="submit">button</button>
+      </p>
+    </form>
+    <form action="">
+      <p>
+        <label for="izé"> Please check the checkbox:</label>
+        <input type="checkbox" id="izé">
+      </p>
+      <p>
+        <label for="radiogomb">Radio button:</label>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name"ugyanaz">
+              radio gomb labele!
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name"ugyanaz">
+              radio gomb labele!
+            </label>
+          </li>
+        </ul>
+      </p>
+    </form>
+  </body>
+</html>
