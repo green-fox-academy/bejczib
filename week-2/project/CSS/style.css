@@ -4,10 +4,21 @@ body {
   flex-direction: row;
   min-height: 100vh;
   background-color: #f6f6f6;
+  font-family: sans-serif;
+  font-size: 0.75em;
+}
+
+h1,
+h2 {
+  border-bottom: 1px solid #aaa;
+  font-family: serif;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1 {
-  border-bottom: 1px solid #aaa;
+  font-size: 28.8px;
 }
 
 .main-container {
@@ -16,13 +27,12 @@ h1 {
 }
 
 .main-sidebar {
-  background-color: aqua;
   order: 0;
   width: 176px;
+  flex: 0 0 auto;
 }
 
 .main-header {
-  background-color: green;
   min-height: 80px;
   position: relative;
 }
@@ -68,10 +78,25 @@ h1 {
 }
 
 .main-footer {
-  background-color: blue;
   min-height: 150px;
 }
 
+.logo {
+  display: block;
+  width: 135px;
+  height: 155px;
+  background: url(../img/logo.png);
+  margin: 6px auto 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+.main-content {
+  background: white;
+  border: 1px solid #a7d7f9;
+  border-right: 0;
+  padding: 16px;
+
+}
 
 .biography {
   width: 270px;
