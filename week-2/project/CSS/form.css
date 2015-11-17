@@ -1,0 +1,56 @@
+.l-username,
+.l-password,
+.l-email,
+.l-captcha,
+.l-button {
+  margin:0 0 15px;
+  padding: 0;
+  width: 290px;
+
+}
+
+.form-create-account input {
+  width: 290px;
+  height: 30px;
+  padding: 4px 4px 4px 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.l-username p,
+.l-password p,
+.l-email p,
+.l-captcha p,
+.l-button p {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.form-create-account {
+  margin: 20px 0;
+}
+
+.l-button input {
+  display: block;
+  background-color: #00af89;
+  color: #fff;
+  border: 1px solid #00af89;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+}
+
+.l-button input:hover {
+  background-color: #008c6d;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+span {
+  float: right;
+  color: #0645ad;
+}

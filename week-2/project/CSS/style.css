@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   background-color: #f6f6f6;
   font-family: sans-serif;
-  font-size: 0.75em;
+  font-size: 0.875em;
 }
 
 h1,
@@ -35,6 +35,10 @@ h1 {
 .main-header {
   min-height: 80px;
   position: relative;
+}
+
+.main-header a {
+  text-decoration: none;
 }
 
 .main-header ul {
@@ -68,8 +72,27 @@ h1 {
   bottom: 0;
 }
 
-.search input {
+.search-bar {
   width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.65em;
+  background-color: inherit;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
 }
 
 .edit-menu {
