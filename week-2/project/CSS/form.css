@@ -54,10 +54,6 @@
   font-style: italic;
 }
 
-::placeholder {
-  font-style: italic;
-}
-
 span {
   float: right;
   color: #0645ad;

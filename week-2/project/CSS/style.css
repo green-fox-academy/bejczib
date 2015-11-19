@@ -20,6 +20,14 @@ h1 {
   font-size: 28.8px;
 }
 
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 a {
   text-decoration: none;
   color: rgb(6, 69, 173);
@@ -61,7 +69,18 @@ a:hover {
 
 .user-menu {
   top: 0;
-  right: 0;
+  right: 10px;
+}
+
+.user-menu a {
+  display: block;
+  padding: 10px 5px;
+}
+
+.user-status {
+  background: url(https://en.wikipedia.org/static/1.27.0-wmf.6/skins/Vector/images/user-icon.png?9e7ea) no-repeat 5px center;
+  padding: 10px 5px 10px 20px;
+  color: grey;
 }
 
 .talk-menu {
@@ -76,8 +95,14 @@ a:hover {
 
 .tab a {
   background: linear-gradient(to bottom, #fff 0%, #e8f2f8 100%);
+  bottom: -1px;
   display: block;
   padding: 15px 5px 5px 5px;
+  position: relative;
+}
+
+.tab a:visited {
+  color: rgb(6, 69, 173);
 }
 
 .tab li {
@@ -86,23 +111,27 @@ a:hover {
 
 .active-tab a {
   background: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 
 .search {
-  right: 0;
+  right: 15px;
   bottom: 0;
   margin-bottom: 5px;
-}
-
-.search-bar {
-  width: 300px;
-  display: flex;
-  justify-content: flex-end;
+  width: 280px;
 }
 
 .search-input {
   width: 100%;
+  border: 1px solid #ccc;
+  height: 24px;
+  font-size: 100%;
+  background: linear-gradient(to bottom, #f6f6f6 0%, white 50%);
+}
+
+.search-input:focus {
+  outline: 0;
 }
 
 .search-button {
@@ -116,6 +145,7 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center center;
   border: 0;
+  cursor: pointer;
 }
 
 .edit-menu {
