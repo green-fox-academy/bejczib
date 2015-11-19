@@ -1,11 +1,10 @@
 body {
-  margin: 0;
+  background: linear-gradient(to bottom, white 30px, #f6f6f6 150px);
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  background-color: #f6f6f6;
   font-family: sans-serif;
-  font-size: 0.875em;
+  margin: 0;
+  min-height: 100vh;
 }
 
 h1,
@@ -19,6 +18,15 @@ h2 {
 
 h1 {
   font-size: 28.8px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(6, 69, 173);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .main-container {
@@ -35,10 +43,7 @@ h1 {
 .main-header {
   min-height: 80px;
   position: relative;
-}
-
-.main-header a {
-  text-decoration: none;
+  font-size: 12px;
 }
 
 .main-header ul {
@@ -48,9 +53,6 @@ h1 {
 }
 .main-header li {
   list-style: none;
-  line-height: 1.125em;
-  margin-left: 0.75em;
-  margin-top: 0.5em;
 }
 
 .main-header nav, .search {
@@ -66,6 +68,26 @@ h1 {
   left: 0;
   bottom: 0;
 }
+
+.tab {
+  background: linear-gradient(to bottom, #fff 0%, #a7d7f9 100%);
+  padding-left: 1px;
+}
+
+.tab a {
+  background: linear-gradient(to bottom, #fff 0%, #e8f2f8 100%);
+  display: block;
+  padding: 15px 5px 5px 5px;
+}
+
+.tab li {
+  padding-right: 1px;
+}
+
+.active-tab a {
+  background: #fff;
+}
+
 
 .search {
   right: 0;
