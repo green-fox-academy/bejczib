@@ -15,6 +15,14 @@
   padding: 4px 4px 4px 8px;
   box-sizing: border-box;
   font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.form-create-account input:focus {
+  border-color: #347bff;
+  box-shadow: inset 0 0 0 2px #347bff;
+  outline: 0;
 }
 
 .l-username p,
