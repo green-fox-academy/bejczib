@@ -183,3 +183,8 @@ a:hover {
   padding: 25px;
   box-sizing: border-box;
 }
+
+.main-sidebar ul {
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+}
