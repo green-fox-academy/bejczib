@@ -21,6 +21,10 @@ h1 {
   font-size: 28.8px;
 }
 
+h2 {
+  margin-top: 10px;
+}
+
 input[type="search"] {
   -webkit-appearance: textfield;
 }
@@ -41,6 +45,7 @@ a:hover {
 .main-container {
   order: 1;
   width: 100%;
+  line-height: 1.6em;
 }
 
 .main-sidebar {
@@ -206,6 +211,36 @@ dt {
 dd {
   margin-left: 80px;
   margin-bottom: 8px;
+}
+
+.nav-bar {
+   border: 1px solid grey;
+   display: inline-block;
+   padding: 10px;
+   background: #f6f6f6;
+}
+
+.nav-bar p {
+  float: left;
+  margin: 0 5px 1px 6px;
+}
+.nav-bar ul {
+ counter-reset: section;/* Creates a new instance of the section counter with each ol element */
+ list-style-type: none;
+ padding: 0 9px 0;
+ font-size: 95%;
+ margin: 0;
+}
+.nav-bar span {
+  font-size: 94%;
+}
+
+.nav-bar > ul {
+  padding: 0;
+}
+
+.nav-bar ul li ul {
+  padding-left: 20px;
 }
 
 .main-sidebar {
