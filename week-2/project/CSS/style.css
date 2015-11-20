@@ -42,6 +42,10 @@ a:hover {
   text-decoration: underline;
 }
 
+#p-indent {
+  margin-left: 20px;
+}
+
 .main-container {
   order: 1;
   width: 100%;
@@ -266,7 +270,33 @@ dd {
 .main-sidebar ul li {
   padding: 3px 0;
 }
+
 .first-sidebar {
   padding-left: 28px;
   padding-top: 20px;
+}
+
+.bottom-bar {
+  border: 1px solid #AAA;
+  background: #f6f6f6;
+}
+
+.bottom-menu {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bottom-menu li {
+  padding: 4px 0;
+  list-style: none;
+}
+
+.bottom-menu a {
+  border-right: 1px solid #AAA;
+  padding: 0px 11px;
+}
+.bottom-menu li:nth-child(1) a,
+.bottom-menu li:nth-child(7) a {
+  border: 0
 }
