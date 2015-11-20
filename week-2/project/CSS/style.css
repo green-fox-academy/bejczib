@@ -5,6 +5,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   min-height: 100vh;
+  font-size: 0.875em;
 }
 
 h1,
@@ -114,7 +115,6 @@ a:hover {
   border-bottom: 1px solid #fff;
 }
 
-
 .search {
   right: 15px;
   bottom: 0;
@@ -171,7 +171,6 @@ a:hover {
   border: 1px solid #a7d7f9;
   border-right: 0;
   padding: 16px;
-
 }
 
 .biography {
@@ -184,7 +183,30 @@ a:hover {
   box-sizing: border-box;
 }
 
+.main-sidebar {
+  font-size: 0.875em;
+}
 .main-sidebar ul {
-  border-bottom: 1px solid #ccc;
   list-style: none;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(to right, white 0%, #ccc 50%, white 100%);
+}
+
+.main-sidebar p {
+  text-indent: 22px;
+  color: #4d4d4d;
+  margin: 5px 0;
+}
+
+.main-sidebar ul li {
+  padding: 3px 0;
+}
+.first-sidebar {
+  padding-left: 28px;
+  padding-top: 20px;
 }
