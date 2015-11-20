@@ -5,6 +5,7 @@
     <title>Create Account - Wikipedia</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body>
     <div class="main-container">
@@ -12,90 +13,123 @@
         <nav class="user-menu">
           <ul>
             <li><a href="form.html">Create Account</a></li>
-            <li class="user-status">Not logged in</li>
-            <li><a href="">Talk</a></li>
-            <li><a href="">Contributions</a></li>
             <li><a href="">Log in</a></li>
           </ul>
         </nav>
         <nav class="talk-menu tab">
           <ul>
-            <li class="active-tab"><a href="">Article</a></li>
-            <li><a href="">Talk</a></li>
-          </ul>
-        </nav>
-        <nav class="edit-menu tab">
-          <ul>
-            <li class="active-tab"><a href="">Read</a></li>
-            <li><a href="">Edit</a></li>
-            <li><a href="">View History</a></li>
+            <li class="active-tab"><a href="">Special Page</a></li>
           </ul>
         </nav>
         <form class="search">
-            <input type="search" class="search-input">
-            <input type="button" class="search-button">
+          <input type="search" class="search-input">
+          <input type="button" class="search-button">
         </form>
       </header>
       <main class="main-content">
         <h1>Create Account</h1>
         <form action="" class="form-create-account">
-            <div class="l-username">
-              <p>
-                <label for="username">Username:
-                  <span>
-                    (help me choose)
-                  </span>
-                </label>
-              </p>
-              <p>
+          <div class="l-username">
+            <p>
+            <label for="username">Username:
+              <span>
+                (help me choose)
+              </span>
+            </label>
+            </p>
+            <p>
               <input type="text" id="username" placeholder="Enter your username">
-              </p>
+            </p>
+          </div>
+          <div class="l-password">
+            <p>
+              <label for="password">Password:</label>
+            </p>
+            <p>
+              <input type="password" id="password" placeholder="Enter your password">
+            </p>
+          </div>
+          <div class="l-password">
+            <p>
+              <label for="confirm-password">Confirm Password:</label>
+            </p>
+            <p>
+              <input type="password" id="confirm-password" placeholder="Confirm your password">
+            </p>
+          </div>
+          <div class="l-email">
+            <p>
+              <label for="emailadress">E-mail adress (optional):</label>
+            </p>
+            <p>
+              <input type="email" id="emailadress" placeholder="Enter your e-mail adress">
+            </p>
+          </div>
+          <div class="l-captcha">
+            <p>
+              To edit this page, please enter the words that appear below in the box (more info):
+            </p>
+            <p>
+              CAPTCHA Security check
+            </p>
+            <div class="captcha-box">
+<!-- need more info to finnish this -->
+              <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"id="captchaimg" >
+              <input type="text" placeholder="Enter the text you see above">
             </div>
-            <div class="l-password">
-              <p>
-                <label for="password">Password:</label>
-              </p>
-              <p>
-                <input type="password" id="password" placeholder="Enter your password">
-              </p>
-            </div>
-            <div class="l-password">
-              <p>
-                <label for="confirm-pawwsord">Confirm Password:</label>
-              </p>
-              <p>
-                <input type="password" id="confirm-password" placeholder="Confirm your password">
-              </p>
-            </div>
-            <div class="l-email">
-              <p>
-                <label for="emailadress">E-mail adress (optional):</label>
-              </p>
-              <p>
-                <input type="email" id="emailadress" placeholder="Enter your e-mail adress">
-              </p>
-            </div>
-            <div class="l-captcha">
-              <p>
-                To edit this page, please enter the words that appear below in the box (more info):
-              </p>
-              <p>
-                CAPTCHA Security check
-              </p>
-              captcha
-            </div>
-            <div class="l-button">
-              <label for="button">
-                <input type="submit" id="button" value="Create your account">
-              </label>
-            </div>
+          </div>
+          <div class="l-button">
+            <label for="button">
+              <input type="submit" id="button" value="Create your account">
+            </label>
+          </div>
         </form>
+      </main>
       <footer class="main-footer">
-
+        <ul class="footer-menu">
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">About Wikipedia</a></li>
+          <li><a href="">Disclaimers</a></li>
+          <li><a href="">Contact Wikipedia</a></li>
+          <li><a href="">Developers</a></li>
+          <li><a href="">Mibile view</a></li>
+        </ul>
       </footer>
     </div>
     <aside class="main-sidebar">
-      <a href="#" class="logo">Wikipedia<a/>
+      <a href="#" class="logo">Wikipedia</a>
+      <ul class="first-sidebar">
+        <li><a href="">Main page</a></li>
+        <li><a href="">Contents</a></li>
+        <li><a href="">Featured content</a></li>
+        <li><a href="">Current events</a></li>
+        <li><a href="">Random article</a></li>
+        <li><a href="">Donate to Wikipedia</a></li>
+        <li><a href="">Wikipedia store</a></li>
+      </ul>
+      <div class="line"></div>
+      <p>Interaction</p>
+      <ul>
+        <li><a href="">Help</a></li>
+        <li><a href="">About Wikipedia</a></li>
+        <li><a href="">Community portal</a></li>
+        <li><a href="">Recent changes</a></li>
+        <li><a href="">Contact page</a></li>
+      </ul>
+      <div class="line"></div>
+      <p>Tools</p>
+      <ul>
+        <li><a href="">What links here</a></li>
+        <li><a href="">Related changes</a></li>
+        <li><a href="">Upload file</a></li>
+        <li><a href="">Special Pages</a></li>
+        <li><a href="">Permanent link</a></li>
+        <li><a href="">Page information</a></li>
+        <li><a href="">Wikidata item</a></li>
+        <li><a href="">Cite this page</a></li>
+      </ul>
+      <div class="line"></div>
+      <p>Languages</p>
     </aside>
   </body>
 </html>
