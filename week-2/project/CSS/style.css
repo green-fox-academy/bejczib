@@ -181,6 +181,31 @@ a:hover {
   margin: 6px 0 12px 12px;
   padding: 25px;
   box-sizing: border-box;
+  font-size: 88%;
+  line-height: 1.5em;
+  padding-bottom: 0;
+}
+
+.biography-content {
+  margin-left: -15px;
+}
+
+.biography-content p {
+  text-indent: 70px;
+  margin: 0;
+}
+
+dl {
+  margin-bottom: 0;
+}
+dt {
+  float: left;
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 80px;
+  margin-bottom: 8px;
 }
 
 .main-sidebar {
