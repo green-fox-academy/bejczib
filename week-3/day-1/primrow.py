@@ -1,7 +1,7 @@
 def isprim(num):
     has_divisor = 0
     i = 2
-    while i < num and num != has_divisor:
+    while i < num:
         if num % i == 0:
             has_divisor = 1
         i += 1
