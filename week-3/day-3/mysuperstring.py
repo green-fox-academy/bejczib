@@ -8,7 +8,7 @@ class MySuperString(object):
 
         for i in range(index, -1, -1):
             rev_string += self.my_string[i]
-            
+
         print(rev_string)
 
         #second solution:

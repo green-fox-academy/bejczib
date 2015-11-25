@@ -11,5 +11,3 @@ class BankAccount():
     def widthdraw(self, name, balance, amount):
         self.balance -= amount
         return self.balance
-
-account1 = BankAccount('Lisa', 20)
