@@ -1,8 +1,8 @@
 class Elem(object):
     __slots__ = ['value', 'next']
 
-    def __repr__ (self):
-        return '({}, {})'.format(self.value, self.next)
+    # def __repr__ (self):
+    #     return '({}, {})'.format(self.value, self.next)
 
 def new_elem(value):
     elem = Elem()
