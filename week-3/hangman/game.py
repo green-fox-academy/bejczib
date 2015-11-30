@@ -46,6 +46,6 @@ class HangMan(object):
         return self.remaining() > 0
 
 
-game = HangMan('levendula')
+game = HangMan('greenfox')
 game.play()
 game.remaining()

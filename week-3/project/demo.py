@@ -13,7 +13,3 @@ class MyString(object):
 
     def palindrome(self):
         return self.my_string + self.reverse()
-
-class PalindromeString:
-    def __init__(self, my_string):
-        self.my_string = my_string

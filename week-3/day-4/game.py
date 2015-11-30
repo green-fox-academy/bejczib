@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 guessed_number = random.randint(0, 10)
 number_of_guesses = 6
