@@ -32,7 +32,7 @@ class Character:
             print(en.print_status())
             print(te.print_status())
             print(arch_enemy.print_status())
-            print('{} kor allatt basztuk szet oket'.format(round))
+            print('{} kor allatt gyaktuk le oket'.format(round))
 
 
 enemies = [
