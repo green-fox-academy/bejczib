@@ -1,0 +1,4 @@
+helo
+peti
+jo ez
+ez lesz a file
