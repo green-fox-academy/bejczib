@@ -11,9 +11,11 @@ class Character:
         name.hp -= self.damage
 
     def get_status(self):
-        sdf
-        sdf
-        return status
+        life_status = 'DEAD'
+        if self.hp > 0:
+            life_status == 'HP: ' + str(self.hp)
+        return self.name + '\n' + life_status
+
 
     def print_status(self):
         pint(self.get_status())
