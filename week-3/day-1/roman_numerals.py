@@ -1,33 +1,45 @@
-import sys
+# n =2008
+# result = ''
+# if n >= 1000:
+#     result +=('M')
+#     n = n-1000
+# elif n >= 500:
+#     result +=('D')
+#     n = n-500
+# elif n >= 100:
+#     result +=('C')
+#     n = n-100
+# elif n >= 90:
+#     result +=('XC')
+#     n = n-90
+# elif n >= 50:
+#     result += ('L')
+#     n = n-50
+# elif n >= 40:
+#     result += ('XL')
+#     n = n-40
+# while n >= 10:
+#     result += ('X')
+#     n = n-10
+# if n >= 9:
+#     result += ('IX')
+#     n = n-9
+# elif n >= 5:
+#     result += ('V')
+#     n = n-5
+# elif n >= 4:
+#     result += ('IV')
+#     n = n-4
+# while n >= 1:
+#     result += ('I')
+#     n = n-1
+#
+# print(result)
 
-temp = input('Adj meg egy szamot 1-99ig!\n')
-user_input = int(temp)
-if user_input >=99:
-    sys.stdout.write('1-99!')
-elif user_input < 1:
-    sys.stdout.write('1-99!')
-else:
-    if user_input >= 90:
-        sys.stdout.write('XC')
-        user_input = user_input-90
-    if user_input >= 50:
-        sys.stdout.write('L')
-        user_input = user_input-50
-    if user_input >= 40:
-        sys.stdout.write('XL')
-        user_input = user_input-40
-    while user_input >= 10:
-        sys.stdout.write('X')
-        user_input = user_input-10
-    if user_input >= 9:
-        sys.stdout.write('IX')
-        user_input = user_input-9
-    if user_input >= 5:
-        sys.stdout.write('V')
-        user_input = user_input-5
-    if user_input >= 4:
-        sys.stdout.write('IV')
-        user_input = user_input-4
-    while user_input >= 1:
-        sys.stdout.write('I')
-        user_input = user_input-1
+
+
+def soultion(string):
+    values = {"I":1, "V":5, "X":10, "L":50, "C":100, "D":500, "M":1000}
+    return sum(map(lambda x: values[x], string))
+
+print(solution('IV'))
