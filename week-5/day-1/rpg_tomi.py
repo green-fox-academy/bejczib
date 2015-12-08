@@ -19,6 +19,16 @@ class Bow(Weapon):
     def self_infect(self):
         return 5
 
+class Enchanced(Weapon):
+    def __init__(self, weapon):
+        self.weapon = weapon
+
+    def damage(self):
+        return self.weapon.damage() * 2
+
+    def self_infect(self):
+        return self.weapon.self_infect() /2
+
 class Warrior:
     def __init__(self, weapon, hp):
         self.weapon = weapon
@@ -27,9 +37,13 @@ class Warrior:
     def strike(self, opponent):
         self.weapon.strike(self, opponent)
 
-warrior = Warrior(Sword(), 100)
+    def __repr__(self):
+        return 'Warrior hp: {}'.format(self.hp)
+
+
+warrior = Warrior(Enchanced(Sword()), 100)
 opponent = Warrior(Bow(), 100)
 
 warrior.strike(opponent)
-print(warrior.hp)
-print(opponent.hp)
+print(warrior)
+print(opponent)
