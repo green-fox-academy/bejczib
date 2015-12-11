@@ -20,7 +20,7 @@ ball = canvas.create_oval(x0,y0,x1,y1, fill = color)
 bar = canvas.create_line(100, 270, 200, 270, fill = color)
 while True:
     canvas.move(ball,dx,dy)
-    canvas.after(50)
+    canvas.after(20)
     canvas.update()
     x0_coord_ball = canvas.coords(ball)[0]
     y0_coord_ball = canvas.coords(ball)[1]
