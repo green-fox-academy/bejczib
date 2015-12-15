@@ -9,9 +9,7 @@ def new_game_action():
                         MenuItems(3, 'Quit', exit_game)
                      ]
     new_game_menu = Menu(new_game_items)
-    new_game_menu.print_menu()
-    choose = int(input('Choose: '))
-    new_game_menu.select_menu(choose)
+    new_game_menu.make_new_menu()
 
 def exit_game():
     exit_game_items = [
@@ -20,9 +18,7 @@ def exit_game():
                       MenuItems(3, 'Resume', None)
                      ]
     exit_game_menu = Menu(exit_game_items)
-    exit_game_menu.print_menu()
-    choose = int(input('Choose: '))
-    exit_game_menu.select_menu(choose)
+    exit_game_menu.make_new_menu()
 
 
 
