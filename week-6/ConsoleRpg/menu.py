@@ -10,6 +10,9 @@ class Menu:
         for item in self.items:
             if item.option == choose:
                 return item.cmd()
+            else:
+                print('Dummy! 1-3!')
+                return self.select_menu(self.validate_user_input())
 
     def make_new_menu(self):
         self.print_menu()
@@ -21,7 +24,7 @@ class Menu:
                 user_input = int(input('Choose: '))
                 break
             except ValueError:
-                print('Faszfej vagy')
+                print('Incorrect input!')
 
         return user_input
 
