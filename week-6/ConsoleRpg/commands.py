@@ -29,6 +29,13 @@ def game_continue():
     player.roll_luck()
     player.roll_dexterity()
     print('{}: {},{},{}'.format(player.name, player.health, player.dexterity, player.luck))
+    roll_game_items = [
+                        MenuItems(1, 'Reroll', game_continue),
+                        MenuItems(2, 'Continue', None),
+                        MenuItems(3, 'Quit', exit_game)
+                     ]
+    roll_game_menu = Menu(roll_game_items)
+    roll_game_menu.make_new_menu()
 
 
 
