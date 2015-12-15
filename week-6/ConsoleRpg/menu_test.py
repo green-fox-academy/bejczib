@@ -13,7 +13,4 @@ class TestMenu(unittest.TestCase):
         menu = Menu(self.items)
         self.assertEqual(menu.select_menu(1), 'Balint')
 
-
-
-
 unittest.main()

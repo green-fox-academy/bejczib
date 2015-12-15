@@ -11,13 +11,20 @@ from menu import *
 
 def new_game_action():
     print(input('Name: '))
-    new_game_items = [
-                        MenuItems(1, 'Renter Name', None),
-                        MenuItems(2, 'Continue', None),
-                        MenuItems(3, 'Quit', None)
-                     ]
-    new_game_menu = Menu(new_game_items)
-    new_game_menu.print_menu()
+    choose = 0
+    while choose != 3:
+        new_game_items = [
+                            MenuItems(1, 'Renter Name', new_game_action),
+                            MenuItems(2, 'Continue', None),
+                            MenuItems(3, 'Quit', exit)
+                         ]
+        new_game_menu = Menu(new_game_items)
+        new_game_menu.print_menu()
+        choose = int(input('Choose: '))
+        new_game_menu.select_menu(choose)
+
+
+
 
 
 

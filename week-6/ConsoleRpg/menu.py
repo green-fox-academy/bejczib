@@ -1,10 +1,8 @@
-
 class Menu:
     def __init__(self, items):
         self.items = items
 
     def print_menu(self):
-
         for item in self.items:
             print('{}: {}'.format(item.option, item.name))
 
