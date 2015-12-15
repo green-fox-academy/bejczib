@@ -8,3 +8,5 @@ def main_menu():
                  MenuItems(3, 'Quit', None)
                  ]
     return Menu(items)
+
+
