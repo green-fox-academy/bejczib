@@ -4,16 +4,17 @@ class Menu:
 
     def print_menu(self):
         for item in self.items:
-            print('{}: {}'.format(item.option, item.name))
+            print(item)
 
     def select_menu(self, choose):
         for item in self.items:
-            if item.option == choose:
+            if item.is_valid_choose(choose):
                 return item.cmd()
 
     def make_new_menu(self):
         self.print_menu()
         self.select_menu(self.validate_user_input())
+
 
     def validate_user_input(self):
         while True:
@@ -29,4 +30,10 @@ class MenuItems:
         self.option = option
         self.name = name
         self.cmd = cmd
+
+    def __repr__(self):
+         return '{}: {}'.format(self.option, self.name)
+
+    def is_valid_choose(self, choose):
+        return choose == self.option
 
