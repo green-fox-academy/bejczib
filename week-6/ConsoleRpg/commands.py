@@ -13,7 +13,8 @@ def new_game_action():
                         MenuItems(3, 'Quit', exit_game)
                      ]
     new_game_menu = Menu(new_game_items)
-    new_game_menu.make_new_menu()
+    new_game_menu.print_menu()
+    new_game_menu.select_menu(int(input('Choose: ')))
 
 def exit_game():
     exit_game_items = [
@@ -22,7 +23,8 @@ def exit_game():
                       MenuItems(3, 'Resume', None)
                      ]
     exit_game_menu = Menu(exit_game_items)
-    exit_game_menu.make_new_menu()
+    exit_game_menu.print_menu()
+    exit_game_menu.select_menu(int(input('Choose: ')))
 
 def roll_stat():
     player.roll_health()
@@ -34,8 +36,9 @@ def roll_stat():
                         MenuItems(2, 'Continue', select_potion),
                         MenuItems(3, 'Quit', exit_game)
                      ]
-    roll_game_menu = Menu(roll_game_items)
-    roll_game_menu.make_new_menu()
+    roll_stat_menu = Menu(roll_game_items)
+    roll_stat_menu.print_menu()
+    roll_stat_menu.select_menu(int(input('Choose: ')))
 
 def select_potion():
     select_potion_items = [
@@ -45,7 +48,8 @@ def select_potion():
                      ]
     print('<--Select Potion-->')
     select_potion_menu = Menu(select_potion_items)
-    select_potion_menu.make_new_menu()
+    select_potion_menu.print_menu()
+    select_potion_menu.select_menu(int(input('Choose: ')))
 
 def selected_potion():
     selected_potion_items = [
