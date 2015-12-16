@@ -1,7 +1,7 @@
 from random import randint
 
 class Character:
-    def __init__(self, name='Anon', dexterity=0, health=0, luck=0, inventory = ["Sword", "Leather Armor", ""]):
+    def __init__(self, name='Lilla', dexterity=0, health=0, luck=0, inventory = ["Sword", "Leather Armor", ""]):
         self.name = name
         self.dexterity = dexterity
         self.health = health
@@ -19,6 +19,12 @@ class Character:
 
     def get_inventory(self, choice):
         self.inventory[2] = choice
+
+    def strike_roll(self):
+        return self.dexterity + randint(1,6) + randint(1,6)
+
+
+
 
 
 

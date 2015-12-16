@@ -67,13 +67,36 @@ def selected_potion():
 def display_player():
     print('{}: {} | {} | {} | {}'.format(player.name, player.health, player.dexterity, player.luck, player.inventory))
     display_player_items = [
-                      MenuItems(1, 'Begin', None),
+                      MenuItems(1, 'Begin', test_fight),
                       MenuItems(2, 'Save', None),
                       MenuItems(3, 'Quit', exit_game)
                      ]
     display_player_menu = Menu(display_player_items)
     display_player_menu.print_menu()
     display_player_menu.select_menu(int(input('Choose: ')))
+
+
+def test_fight():
+    print('Let\'s try your sword on a test fight!!!')
+    monster = Character()
+    monster.roll_health()
+    monster.roll_luck()
+    monster.roll_dexterity()
+
+    if monster.strike_roll() > player.strike_roll():
+        print('You are dead, Lilla won..')
+    else:
+        print('You crushed Lilla!')
+    test_fight_items = [
+                      MenuItems(1, 'Continue', None),
+                      MenuItems(2, 'Try your Luck', None),
+                      MenuItems(3, 'Retreat', None),
+                      MenuItems(4, 'Quit', exit_game)
+                     ]
+    test_fight_menu = Menu(test_fight_items)
+    test_fight_menu.print_menu()
+    test_fight_menu.select_menu(int(input('Choose: ')))
+
 
 
 
