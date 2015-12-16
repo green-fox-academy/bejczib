@@ -4,7 +4,7 @@ class Menu:
 
     def print_menu(self):
         for item in self.items:
-            print(item)
+            print('{}: {}'.format(item.option, item.name))
 
     def select_menu(self, choose):
         for item in self.items:
@@ -12,17 +12,19 @@ class Menu:
                 return item.call_cmd()
         print('Incorrect input!')
 
+
 class MenuItems:
     def __init__(self, option, name, cmd):
         self.option = option
         self.name = name
         self.cmd = cmd
 
-    def __repr__(self):
-         return '{}: {}'.format(self.option, self.name)
+    # def __repr__(self):
+    #      return ')
 
     def is_valid_choose(self, choose):
         return choose == self.option
 
     def call_cmd(self):
         return self.cmd()
+

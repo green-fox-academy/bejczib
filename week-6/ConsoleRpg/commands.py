@@ -43,24 +43,37 @@ def roll_stat():
 def select_potion():
     select_potion_items = [
                       MenuItems(1, 'Potion of Health', selected_potion),
-                      MenuItems(2, 'Potion of Dexterity', None),
-                      MenuItems(3, 'Potion of Luck', None)
+                      MenuItems(2, 'Potion of Dexterity', selected_potion),
+                      MenuItems(3, 'Potion of Luck', selected_potion)
                      ]
     print('<--Select Potion-->')
     select_potion_menu = Menu(select_potion_items)
     select_potion_menu.print_menu()
-    select_potion_menu.select_menu(int(input('Choose: ')))
+    choice = int(input('Choose: '))
+    player.get_inventory(select_potion_items[choice-1].name)
+    select_potion_menu.select_menu(choice)
+
 
 def selected_potion():
     selected_potion_items = [
                       MenuItems(1, 'Reselect Potion', select_potion),
-                      MenuItems(2, 'Continue', None),
+                      MenuItems(2, 'Continue', display_player),
                       MenuItems(3, 'Quit', exit_game)
                      ]
     selected_potion_menu = Menu(selected_potion_items)
-    selected_potion_menu.make_new_menu()
+    selected_potion_menu.print_menu()
+    selected_potion_menu.select_menu(int(input('Choose: ')))
 
-
+def display_player():
+    print('{}: {} | {} | {} | {}'.format(player.name, player.health, player.dexterity, player.luck, player.inventory))
+    display_player_items = [
+                      MenuItems(1, 'Begin', None),
+                      MenuItems(2, 'Save', None),
+                      MenuItems(3, 'Quit', exit_game)
+                     ]
+    display_player_menu = Menu(display_player_items)
+    display_player_menu.print_menu()
+    display_player_menu.select_menu(int(input('Choose: ')))
 
 
 
