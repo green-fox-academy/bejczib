@@ -1,5 +1,8 @@
 from menu import *
 from character import *
+from fight import *
+from load import *
+from save import *
 import json
 
 def new_game_action():
@@ -17,9 +20,9 @@ def new_game_action():
 
 def exit_game():
     exit_game_items = [
-                      MenuItems(1, 'Save and Quit', exit),
+                      MenuItems(1, 'Save and Quit', ),
                       MenuItems(2, 'Quit without Save', exit),
-                      MenuItems(3, 'Resume', None)
+                      MenuItems(3, 'Resume', new_game_action)
                      ]
     exit_game_menu = Menu(exit_game_items)
     exit_game_menu.print_menu()
@@ -104,8 +107,8 @@ def after_strike():
     fight.after_strike()
     after_strike_items = [
                       MenuItems(1, 'Strike', after_strike),
-                      MenuItems(3, 'Retreat', None),
-                      MenuItems(4, 'Quit', exit_game)
+                      MenuItems(2, 'Retreat', None),
+                      MenuItems(3, 'Quit', exit_game)
                      ]
     after_strike_menu = Menu(after_strike_items)
     after_strike_menu.print_menu()
@@ -115,8 +118,8 @@ def try_luck_menu():
     fight.try_luck()
     try_luck_items = [
                       MenuItems(1, 'Strike', after_strike),
-                      MenuItems(3, 'Retreat', None),
-                      MenuItems(4, 'Quit', exit_game)
+                      MenuItems(2, 'Retreat', None),
+                      MenuItems(3, 'Quit', exit_game)
                      ]
     try_luck_menu = Menu(try_luck_items)
     try_luck_menu.print_menu()
@@ -129,7 +132,7 @@ def save_menu():
                       MenuItems(3, 'Quit', exit_game)
                      ]
     print('your already saved items is:')
-    player.list_jsons()
+    load.list_jsons()
     print('------------------------------')
     save_menu = Menu(save_menu_items)
     save_menu.print_menu()
@@ -137,13 +140,13 @@ def save_menu():
 
 def add_item():
     saved_item = input('Please enter a name to save: ')
-    player_dict = player.make_dict()
-    player.save(saved_item, player_dict)
+    save.save(saved_item, save.make_dict())
+    display_player()
 
 def load_menu():
     load_menu_items = [
                       MenuItems(1, 'Load game', load_game),
-                      MenuItems(2, 'Resume', None),
+                      MenuItems(2, 'Resume', new_game_action),
                       MenuItems(3, 'Quit', exit_game)
                      ]
     load_menu = Menu(load_menu_items)
@@ -151,11 +154,9 @@ def load_menu():
     load_menu.select_menu(int(input('Choose: ')))
 
 def load_game():
-    player.list_jsons()
-    print(player.name)
+    load.list_jsons()
     choose = input('These are, your saved games, please choose one: ')
-    plo = player.load(choose)
-    player.dict_to_player(plo)
+    load.dict_to_player(load.load(choose))
     display_player()
 
 
