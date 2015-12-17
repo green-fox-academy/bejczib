@@ -7,7 +7,9 @@ class Character:
         self.name = name
         self.dexterity = dexterity
         self.health = health
+        self.current_health = health
         self.luck = luck
+        self.current_luck = luck
         self.inventory = inventory
 
     def roll_luck(self):
@@ -22,11 +24,15 @@ class Character:
     def get_inventory(self, choice):
         self.inventory[2] = choice
 
-    def strike_roll(self):
+    def roll_strength(self):
         return self.dexterity + randint(1,6) + randint(1,6)
 
-    def is_win(self, opponet):
-        return self.strike_roll() > opponet.strike_roll()
+    def try_my_luck(self):
+        return randint(1,6) * 2
+
+
+
+
 
     def save(self, name, item):
         filename = open(name + '.json', 'w')
@@ -37,7 +43,9 @@ class Character:
         return {'Name': self.name,
                 'Dexterity': self.dexterity,
                 'Health': self.health,
+                'Current Health': self.current_health,
                 'Luck': self.luck,
+                'Current Luck': self.current_luck,
                 'Inventory': self.inventory
                 }
 
@@ -64,19 +72,30 @@ class Character:
         self.name = saved_dict['Name']
         self.dexterity = saved_dict['Dexterity']
         self.luck = saved_dict['Luck']
+        self.current_luck = saved_dict['Current Luck']
         self.health = saved_dict['Health']
+        self.current_health = saved_dict['Current Health']
         self.inventory = saved_dict['Inventory']
 
 
+class Fight(Character):
+    def is_hit(self):
+        return player.roll_strength() > monster.roll_strength()
+
+    def after_strike(self):
+        if self.is_hit:
+            monster.current_health =- 2
+        else:
+            player.current_health =- 2
+
+    def try_luck_in_strike(self):
+        if try_my_luck() < player.current_luck:
+            monster.current_health =- 4
+            player.current_luck =- 1
+        else:
+            monster.current_health =- 1
 
 
-
-
-#.... later..
-
-# class PotionOfHealth:
-#     def __init__(self, character):
-#         self.character = character
-
-#     def add_health(self, character):
-#         return self.character.health + 15
+player = Character()
+monster = Character()
+fight = Fight()

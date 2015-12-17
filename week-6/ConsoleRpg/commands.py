@@ -2,9 +2,6 @@ from menu import *
 from character import *
 import json
 
-player = Character()
-saved_items = ['first', 'lilla']
-
 def new_game_action():
     player.name = input('Name: ')
     print(player.name)
@@ -80,15 +77,14 @@ def display_player():
 
 def test_fight():
     print('Let\'s try your sword on a test fight!!!')
-    monster = Character()
     monster.roll_health()
     monster.roll_luck()
     monster.roll_dexterity()
 
-    if player.is_win(monster):
-        print('You won!!')
+    if fight.is_hit():
+        print('You hit the monster!!')
     else:
-        print('Monster won..')
+        print('Monster hit you..')
 
     test_fight_items = [
                       MenuItems(1, 'Continue', None),
