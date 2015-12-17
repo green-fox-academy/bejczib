@@ -83,10 +83,10 @@ def test_fight():
     monster.roll_luck()
     monster.roll_dexterity()
 
-    if monster.strike_roll() > player.strike_roll():
-        print('You are dead, Lilla won..')
+    if player.is_win(monster):
+        print('You won!!')
     else:
-        print('You crushed Lilla!')
+        print('Monster won..')
     test_fight_items = [
                       MenuItems(1, 'Continue', None),
                       MenuItems(2, 'Try your Luck', None),

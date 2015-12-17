@@ -23,6 +23,9 @@ class Character:
     def strike_roll(self):
         return self.dexterity + randint(1,6) + randint(1,6)
 
+    def is_win(self, opponet):
+        return self.strike_roll() > opponet.strike_roll()
+
 
 
 
