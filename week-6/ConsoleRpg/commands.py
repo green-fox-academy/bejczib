@@ -101,10 +101,10 @@ def test_fight():
 
 
 def save_menu():
-
     saved_item = input('Please enter a name to save: ')
     player_dict = player.make_dict()
     player.save(saved_item, player_dict)
+
 
 
 
