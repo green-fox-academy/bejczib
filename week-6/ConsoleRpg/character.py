@@ -80,7 +80,12 @@ class Character:
 
 class Fight(Character):
     def is_hit(self):
-        return player.roll_strength() > monster.roll_strength()
+        if player.roll_strength() > monster.roll_strength():
+            return True
+        elif player.roll_strength() < monster.roll_strength():
+            return False
+        else:
+            self.is_hit()
 
     def after_strike(self):
         if self.is_hit:
@@ -88,8 +93,9 @@ class Fight(Character):
         else:
             player.current_health =- 2
 
-    def try_luck_in_strike(self):
-        if try_my_luck() < player.current_luck:
+    def try_luck(self):
+        if self.is_hit()
+        if player.try_my_luck() < player.current_luck:
             monster.current_health =- 4
             player.current_luck =- 1
         else:
