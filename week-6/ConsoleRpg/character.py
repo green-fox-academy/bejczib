@@ -34,7 +34,7 @@ class Character:
         filename.close()
 
     def make_dict(self):
-        return {'name': self.name,
+        return {'Name': self.name,
                 'Dexterity': self.dexterity,
                 'Health': self.health,
                 'Luck': self.luck,
@@ -48,7 +48,6 @@ class Character:
                 jsons.append(file)
         for item in jsons:
             print(item.split('.')[0])
-        return item  #just for avoid None
 
     def load(self, saved_file):
         loaded = []
@@ -60,6 +59,13 @@ class Character:
         filename.close()
 
         return loaded
+
+    def dict_to_player(self, saved_dict):
+        self.name = saved_dict['Name']
+        self.dexterity = saved_dict['Dexterity']
+        self.luck = saved_dict['Luck']
+        self.health = saved_dict['Health']
+        self.inventory = saved_dict['Inventory']
 
 
 

@@ -102,12 +102,42 @@ def test_fight():
 
 
 def save_menu():
-    print('your already saved items is:\n')
+    save_menu_items = [
+                      MenuItems(1, 'Add new item', add_item),
+                      MenuItems(2, 'Resume', None),
+                      MenuItems(3, 'Quit', exit_game)
+                     ]
+    print('your already saved items is:')
     player.list_jsons()
     print('------------------------------')
+    save_menu = Menu(save_menu_items)
+    save_menu.print_menu()
+    save_menu.select_menu(int(input('Choose: ')))
+
+def add_item():
     saved_item = input('Please enter a name to save: ')
     player_dict = player.make_dict()
     player.save(saved_item, player_dict)
+
+def load_menu():
+    load_menu_items = [
+                      MenuItems(1, 'Load game', load_game),
+                      MenuItems(2, 'Resume', None),
+                      MenuItems(3, 'Quit', exit_game)
+                     ]
+    load_menu = Menu(load_menu_items)
+    load_menu.print_menu()
+    load_menu.select_menu(int(input('Choose: ')))
+
+def load_game():
+    player.list_jsons()
+    print(player.name)
+    choose = input('These are, your saved games, please choose one: ')
+    plo = player.load(choose)
+    player.dict_to_player(plo)
+    display_player()
+
+
 
 
 
