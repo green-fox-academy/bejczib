@@ -87,8 +87,8 @@ def test_fight():
         print('Monster hit you..')
 
     test_fight_items = [
-                      MenuItems(1, 'Continue', None),
-                      MenuItems(2, 'Try your Luck', None),
+                      MenuItems(1, 'Continue', after_strike),
+                      MenuItems(2, 'Try your Luck', try_luck_menu),
                       MenuItems(3, 'Retreat', None),
                       MenuItems(4, 'Quit', exit_game)
                      ]
@@ -96,6 +96,31 @@ def test_fight():
     test_fight_menu.print_menu()
     test_fight_menu.select_menu(int(input('Choose: ')))
 
+def after_strike():
+    if fight.is_hit():
+        print('You hit the monster!!')
+    else:
+        print('Monster hit you..')
+    fight.after_strike()
+    after_strike_items = [
+                      MenuItems(1, 'Strike', after_strike),
+                      MenuItems(3, 'Retreat', None),
+                      MenuItems(4, 'Quit', exit_game)
+                     ]
+    after_strike_menu = Menu(after_strike_items)
+    after_strike_menu.print_menu()
+    after_strike_menu.select_menu(int(input('Choose: ')))
+
+def try_luck_menu():
+    fight.try_luck()
+    try_luck_items = [
+                      MenuItems(1, 'Strike', after_strike),
+                      MenuItems(3, 'Retreat', None),
+                      MenuItems(4, 'Quit', exit_game)
+                     ]
+    try_luck_menu = Menu(try_luck_items)
+    try_luck_menu.print_menu()
+    try_luck_menu.select_menu(int(input('Choose: ')))
 
 def save_menu():
     save_menu_items = [

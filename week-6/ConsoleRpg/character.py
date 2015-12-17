@@ -27,12 +27,8 @@ class Character:
     def roll_strength(self):
         return self.dexterity + randint(1,6) + randint(1,6)
 
-    def try_my_luck(self):
-        return randint(1,6) * 2
-
-
-
-
+    def roll_try_luck(self):
+        return randint(1,6) + randint(1,6)
 
     def save(self, name, item):
         filename = open(name + '.json', 'w')
@@ -85,22 +81,27 @@ class Fight(Character):
         elif player.roll_strength() < monster.roll_strength():
             return False
         else:
-            self.is_hit()
+            return self.is_hit()
 
     def after_strike(self):
-        if self.is_hit:
+        if self.is_hit():
             monster.current_health =- 2
         else:
             player.current_health =- 2
 
     def try_luck(self):
-        if self.is_hit()
-        if player.try_my_luck() < player.current_luck:
-            monster.current_health =- 4
-            player.current_luck =- 1
-        else:
-            monster.current_health =- 1
-
+        if self.is_hit():
+            if player.roll_try_luck() < player.current_luck:
+                monster.current_health =- 4
+                player.current_luck =- 1
+            else:
+                monster.current_health =- 1
+        elif not self.is_hit():
+            if player.roll_try_luck() < player.current_luck:
+                player.current_health =- 1
+                player.current_luck =- 1
+            else:
+                player.current_health =- 3
 
 player = Character()
 monster = Character()
