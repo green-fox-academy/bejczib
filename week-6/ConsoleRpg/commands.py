@@ -1,5 +1,6 @@
 from menu import *
 from character import *
+import json
 
 player = Character()
 
@@ -68,7 +69,7 @@ def display_player():
     print('{}: {} | {} | {} | {}'.format(player.name, player.health, player.dexterity, player.luck, player.inventory))
     display_player_items = [
                       MenuItems(1, 'Begin', test_fight),
-                      MenuItems(2, 'Save', None),
+                      MenuItems(2, 'Save', save_menu),
                       MenuItems(3, 'Quit', exit_game)
                      ]
     display_player_menu = Menu(display_player_items)
@@ -87,6 +88,7 @@ def test_fight():
         print('You won!!')
     else:
         print('Monster won..')
+
     test_fight_items = [
                       MenuItems(1, 'Continue', None),
                       MenuItems(2, 'Try your Luck', None),
@@ -98,6 +100,11 @@ def test_fight():
     test_fight_menu.select_menu(int(input('Choose: ')))
 
 
+def save_menu():
+
+    saved_item = input('Please enter a name to save: ')
+    player_dict = player.make_dict()
+    player.save(saved_item, player_dict)
 
 
 

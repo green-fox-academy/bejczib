@@ -1,4 +1,5 @@
 from random import randint
+import json
 
 class Character:
     def __init__(self, name='Lilla', dexterity=0, health=0, luck=0, inventory = ["Sword", "Leather Armor", ""]):
@@ -25,6 +26,29 @@ class Character:
 
     def is_win(self, opponet):
         return self.strike_roll() > opponet.strike_roll()
+
+    def save(self, name, item):
+        filename = open(name + '.json', 'w')
+        json.dump(item, filename)
+        filename.close()
+
+    def make_dict(self):
+        return {'name': self.name,
+                'Dexterity': self.dexterity,
+                'Health': self.health,
+                'Luck': self.luck,
+                'Inventory': self.inventory
+                }
+    def load(self, saved_file):
+        loaded = []
+        filename = open(saved_file + '.json', 'r')
+        try:
+            loaded = json.load(filename)
+        except Exception:
+            pass
+        filename.close()
+
+        return loaded
 
 
 
