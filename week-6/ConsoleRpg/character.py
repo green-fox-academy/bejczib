@@ -1,5 +1,6 @@
 from random import randint
 import json
+import os
 
 class Character:
     def __init__(self, name='Lilla', dexterity=0, health=0, luck=0, inventory = ["Sword", "Leather Armor", ""]):
@@ -39,6 +40,16 @@ class Character:
                 'Luck': self.luck,
                 'Inventory': self.inventory
                 }
+
+    def list_jsons(self):
+        jsons = []
+        for file in os.listdir():
+            if file.endswith(".json"):
+                jsons.append(file)
+        for item in jsons:
+            print(item.split('.')[0])
+        return item  #just for avoid None
+
     def load(self, saved_file):
         loaded = []
         filename = open(saved_file + '.json', 'r')

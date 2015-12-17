@@ -3,6 +3,7 @@ from character import *
 import json
 
 player = Character()
+saved_items = ['first', 'lilla']
 
 def new_game_action():
     player.name = input('Name: ')
@@ -101,9 +102,10 @@ def test_fight():
 
 
 def save_menu():
-    saved_items = []
+    print('your already saved items is:\n')
+    player.list_jsons()
+    print('------------------------------')
     saved_item = input('Please enter a name to save: ')
-    saved_items.append(saved_item)
     player_dict = player.make_dict()
     player.save(saved_item, player_dict)
 
