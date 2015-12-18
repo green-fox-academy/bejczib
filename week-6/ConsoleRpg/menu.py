@@ -20,7 +20,7 @@ class MenuItems:
         self.cmd = cmd
 
     # def __repr__(self):
-    #      return ')
+    #      return
 
     def is_valid_choose(self, choose):
         return choose == self.option

@@ -1,5 +1,6 @@
 import json
 from character import *
+
 class Save:
     def save(self, name, item):
         filename = open(name + '.json', 'w')
