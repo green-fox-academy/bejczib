@@ -1,7 +1,7 @@
 function isPrim(num) {
     var hasDivisor = 0;
-    var i = 0;
-    while (i <= num) {
+    var i = 2;
+    while (i < num) {
         if (num % i ==0) {
             hasDivisor = 1;
             break
@@ -11,11 +11,11 @@ function isPrim(num) {
         }
     }
 
-    if(hasDivisor ==1 && num != 0 && num != 1) {
+    if(hasDivisor ==0 && num != 0 && num != 1) {
         console.log("it's prim!")
     }else {
         console.log("it's not prim!")
     }
 }
 
-isPrim(0)
+isPrim(2)
