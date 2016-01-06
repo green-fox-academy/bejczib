@@ -14,3 +14,6 @@ var golf = new Car('kopott piros', '1es golf', 1e10);
 
 golf.ride(400);
 console.log(golf.km);
+
+
+

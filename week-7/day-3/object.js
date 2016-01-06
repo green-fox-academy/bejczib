@@ -13,3 +13,4 @@ var humwee = {
 humwee.ride(200);
 
 console.log(humwee.km);
+

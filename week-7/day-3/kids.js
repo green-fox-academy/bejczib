@@ -23,12 +23,8 @@ var kids = [
 // console.log(getTheRichestKidsName(kids))
 
 
-console.log(kids.reduce(function(a,b) {return a.candles > b.candles ? a : b}).name)
+console.log(kids.reduce((a,b) => a.candles > b.candles ? a : b).name)
 
 
 
 
-
-
-
-console.log([1,2,3,57,5,3].reduce(function(a,b) {return Math.max(a,b)}))
