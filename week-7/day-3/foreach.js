@@ -9,5 +9,3 @@ alma.forEach(function  (e) {console.log(e + '*' + 4 + '=' + e * 4)})
 
 
 console.log(alma.map((e) => e + '*' + 4 + '=' + e * 4).join('\n'));
-
-

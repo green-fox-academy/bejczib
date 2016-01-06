@@ -20,12 +20,11 @@ function Student() {
         return 'The student average: ' + makeAverage(averages).toFixed(2);
     }
 
-    this.getCount = function(subject) {
+    this.gst = function() {
         var db = 0;
-        for (var grades in this.grades[subject]) {
-            db++;
-        };
-        return 'The quantity of ' + subject + ' grades : ' + db;
+        for (var subject in this.grades) {
+            console.log(subject + ' : ' + this.grades[subject].length)
+            }
     }
 
     this.getAverageBySubject = function(subject) {
@@ -57,10 +56,10 @@ dezso.addGrade('tesi',3);
 dezso.addGrade('tesi',5);
 dezso.addGrade('tesi',5);
 
-console.log(dezso.grades);
-console.log(dezso.getAverage());
-console.log(dezso.getAverageBySubject('tori'));
-console.log(dezso.getCount('matek'));
+//console.log(dezso.grades);
+//console.log(dezso.getAverage());
+//console.log(dezso.getAverageBySubject('tori'));
+dezso.getCount();
 
 
 

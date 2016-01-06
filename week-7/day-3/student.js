@@ -8,6 +8,9 @@ function Student(grades) {
     this.getAverage = function() {
         return this.grades.reduce((a,b) => a+b) / this.grades.length;
     }
+    this.getEdus = function() {
+        this.grades.forEach((e) => console.log(e))
+    }
 }
 
 var karcsi = new Student([]);
@@ -19,3 +22,4 @@ karcsi.addGrade(2);
 karcsi.addGrade(3);
 console.log(karcsi.grades)
 console.log(karcsi.getAverage())
+karcsi.getEdus();
