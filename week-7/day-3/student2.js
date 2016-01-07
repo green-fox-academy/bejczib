@@ -58,9 +58,9 @@ dezso.addGrade('tesi',3);
 dezso.addGrade('tesi',5);
 dezso.addGrade('tesi',5);
 
-//console.log(dezso.grades);
-//console.log(dezso.getAverage());
-//console.log(dezso.getAverageBySubject('tori'));
+console.log(dezso.grades);
+console.log(dezso.getAverage());
+console.log(dezso.getAverageBySubject('tori'));
 console.log(dezso.getCount());
 
 
