@@ -16,37 +16,41 @@ img {
     -webit-border-radius: 10px;
 }
 
-.container {
+.gallery img {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    animation-name: -wobble-to-top-right;;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.thumbnail {
     width: 800px;
     padding: 5px;
-    display: flex;
     margin: 15px auto;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
-.box img {
+.thumbnail img {
     width: 60px;
     height: 40px;
-    margin-left: 24px;
+    margin-left: 24px
+    /*-webkit-filter: blur(0px);
+    filter: blur(0px);*/
 }
 
-.small_pic {
-    width: 100%;
-    height: 100%;
-    -webkit-filter: blur(2px);
-    filter: blur(10px);
-
+.thumbnail img:hover {
+    -webkit-transform: scale(1.5);
+     transform: scale(1.5);
 }
 
-.small_pic:hover {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-}
-
-.active {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
+img.active {
+    -webkit-transform: scale(1.5);
+     transform: scale(1.5);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
 }
 
 button {
