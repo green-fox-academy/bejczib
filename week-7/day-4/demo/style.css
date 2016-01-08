@@ -1,5 +1,64 @@
 .gallery {
-    border: 1px solid black;
     margin: 0 auto;
     width: 735px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    -webit-border-radius: 10px;
+}
+
+.container {
+    width: 800px;
+    padding: 5px;
+    display: flex;
+    margin: 15px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box img {
+    width: 60px;
+    height: 40px;
+    margin-left: 24px;
+}
+
+.small_pic {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(2px);
+    filter: blur(10px);
+
+}
+
+.small_pic:hover {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.active {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+button {
+    background: url('arrow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 0;
+}
+
+#left_arrow {
+    transform: rotate(180deg);
 }
