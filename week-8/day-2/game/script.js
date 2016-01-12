@@ -53,7 +53,7 @@ function Game() {
 
     setInterval(function() {
         if (_this.lollypopIndex >= 10) {
-            this.buttonChecker();
+            _this.buttonChecker();
             _this.speedIndex = Math.floor(_this.lollypopIndex/10);
             _this.speed.innerHTML = _this.speedIndex;
             _this.candiIndex+= _this.speedIndex;
@@ -80,6 +80,7 @@ function Game() {
 var game = new Game();
 
 game.startGame();
+
 
 
 
