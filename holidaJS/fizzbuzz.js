@@ -1,3 +1,5 @@
+'use strict'
+
 function fizzbuzz() {
     var i = 0
     while (i <= 100) {
