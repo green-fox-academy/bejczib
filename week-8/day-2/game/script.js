@@ -84,3 +84,23 @@ game.startGame();
 
 
 
+
+var alma = document.querySelector('.button')
+
+console.log(alma);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
