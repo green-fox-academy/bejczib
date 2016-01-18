@@ -1,0 +1,11 @@
+.done {
+    text-decoration: line-through;
+    color: grey;
+}
+
+
+.todo-box {
+    margin: 0 auto;
+    border: 1px black solid;
+    width: 500px;
+}
