@@ -2,7 +2,7 @@
 
 var url = 'https://pure-ridge-2042.herokuapp.com/todos';
 var newTodo = document.querySelector('.new-todo');
-var addItemButton = document.querySelector('.add-item');
+var addItemButton = document.querySelector('.add-button');
 var deleteButton = document.querySelector('.delete-button');
 var doneButton = document.querySelector('.done-button');
 var todoContainer = document.querySelector('.todo-container');
@@ -26,7 +26,7 @@ var listCallback = function (response) {
   console.log('todoItems: ' + todoItems)
   todoContainer.innerHTML = '';
   todoItems.forEach(function(todoItem){
-    var newTodoItem = document.createElement('p');
+    var newTodoItem = document.createElement('li');
     newTodoItem.innerText = todoItem.text;
     if (todoItem.completed === true) {
       newTodoItem.classList.add('done');
@@ -43,7 +43,7 @@ var listCallback = function (response) {
 
 function completed() {
     var checkboxes = document.querySelectorAll('.checkbox');
-    var p = document.querySelectorAll('p');
+    var p = document.querySelectorAll('li');
     for (var i=0;i<checkboxes.length;i++) {
         if(checkboxes[i].checked === true) {
             var text = p[i].innerText

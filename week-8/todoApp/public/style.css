@@ -1,3 +1,5 @@
+
+
 .done {
     text-decoration: line-through;
     color: grey;
@@ -6,6 +8,60 @@
 
 .todo-box {
     margin: 0 auto;
-    border: 1px black solid;
     width: 500px;
 }
+
+.new-todo {
+    border: 2px solid black;
+}
+
+.button-box {
+    position: relative;
+    float: right;
+    clear: both;
+    padding-right: 146px;
+}
+
+.new-todo {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    margin-right: 10px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+}
+
+button:hover {
+    background-color: steelblue;
+}
+
+.add-button {
+    background: url(add64.png) no-repeat;
+    background-position: center;
+}
+
+.delete-button {
+    background: url(arrow125.png) no-repeat;
+    background-position: center;
+}
+
+.done-button {
+    background: url(check34.png) no-repeat;
+    background-position: center;
+}
+
+
+::-webkit-input-placeholder {
+    padding-top: 5px;
+}
+
+::placeholder {
+    color: red;
+};
