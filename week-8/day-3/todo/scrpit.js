@@ -5,7 +5,7 @@ function createRequest(url, callback) {
     var probaRequest = new XMLHttpRequest();
     probaRequest.open('POST', url);
     probaRequest.setRequestHeader('Content-Type', 'application/json')
-    var todo = 'A Guryi nagyon ugyes!';
+    var todo =
     probaRequest.send(JSON.stringify({text: todo}));
     probaRequest.onreadystatechange = function() {
         if (probaRequest.readyState === 4) {
