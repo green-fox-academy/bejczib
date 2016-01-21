@@ -46,7 +46,7 @@ function completed() {
         if(checkboxes[i].checked === true) {
             var text = p[i].innerText
             var data = JSON.stringify({ 'text': text, 'completed': true });
-            createRequest('PUT', url + '/' + parseInt(checkboxes[i].id), data, createTodoCallback);
+            createRequest('PUT', url + '/' + parseInt(checkboxes[i].id), data, createTodoCallback;
             }
         }
 }
